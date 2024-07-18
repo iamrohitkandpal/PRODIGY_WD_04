@@ -9,11 +9,12 @@ window.addEventListener("DOMContentLoaded", function() {
 })
 
 
-const addEventOnElements = function (elements, eventType, callback) {
-    for (let i = 0, len = elements.length; i < len; i++) {
-      elements[i].addEventListener(eventType, callback);
-    }
+
+const addEventOnElements = (elements, eventType, callback) => {
+  for (let i = 0, len = elements.length; i < len; i++) {
+    elements[i].addEventListener(eventType, callback);
   }
+};
 
 
 
@@ -28,3 +29,17 @@ addEventOnElements(navTogglers, "click", function () {
   overlay.classList.toggle("active");
   document.body.classList.toggle("nav-active");
 });
+
+addEventOnElements(navLinks, "click", function () {
+  navbar.classList.remove("active");
+  overlay.classList.remove("active");
+  document.body.classList.remove("nav-active");
+});
+
+
+/* ==== Header Activator ==== */
+const header = document.querySelector("[data-header]");
+
+window.addEventListener("scroll", function () {
+  header.classList[this.window.scrollY > 100 ? "add" : "remove"]("active");
+})
