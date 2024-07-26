@@ -66,3 +66,65 @@ header{
     }
   } 
 }
+
+section{
+  width: min(1300px, 100%);
+  margin: auto;
+  padding: 50px;
+  box-sizing: border-box;
+  &.home{
+    padding-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+    & .content{
+      font-family: 'MuseoModerno', system-ui;
+      & .name{
+        font-size: 7em;
+        font-weight: bold;
+        line-height: 1em;
+        & span{
+          background-image: linear-gradient(
+            to right, #7BE728, #F3265F, #7F40AC, #7BE728
+          );
+          background-size: 200% auto;
+          animation: gradientAnimation 1s linear infinite;
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
+      }
+      & .des {
+        color: #eee5;
+        margin: 30px 0;
+        border-left: 2em;
+      }
+      & a {
+        color: #eee;
+        font-size: large;
+        font-weight: bold;
+        text-decoration: none;
+        border: 1px solid #eee;
+        padding: 20px 30px;
+        border-radius: 40px;
+        margin-top: 30px;
+        display: block;
+        width: max-content;
+      }
+    }
+    & .avatar{
+      text-align: right;
+      & .card{
+        
+      }
+    }
+  }
+}
+
+@keyframes gradientAnimation{
+  to{
+    background-position: 200% center;
+  }
+}
