@@ -1,13 +1,14 @@
 import React, { useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faHtml5, faCss3, faJs, faNodeJs, } from '@fortawesome/free-brands-svg-icons';
-// import CustomHook from './CustomHook';
+import { faReact, faHtml5, faCss3, faJs, faNodeJs } from '@fortawesome/free-brands-svg-icons';
+import { faDatabase } from '@fortawesome/free-solid-svg-icons';
+import CustomHook from './CustomHook';
 
 const Skills = () => {
 
     const divs = useRef([]);
     const scrollTab = useRef();
-    // CustomHook(scrollTab, divs);
+    CustomHook(scrollTab, divs);
     const [listSkills] = useState([
         {
             name: 'HTMl',
@@ -37,7 +38,7 @@ const Skills = () => {
         {
             name: 'MongoDB',
             des: 'Consectetur labore anim nulla occaecat dolore aliquip-Ullamco tempor sint ex velit occaecat consequat incididunt.Culpa pariatur cillum fugiat id anim aute nulla officia cillum',
-            icon: <FontAwesomeIcon icon="fa-database" />
+            icon: faDatabase
         },
     ])
 
