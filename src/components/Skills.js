@@ -43,7 +43,7 @@ const Skills = () => {
     ])
 
     return (
-        <section className='skills'>
+        <section className='skills' ref={scrollTab}>
             <div className="title" ref={(el) => el && divs.current.push(el)}>
                 This is my Skills
             </div>

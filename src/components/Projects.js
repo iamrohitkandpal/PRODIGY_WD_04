@@ -36,24 +36,25 @@ const Projects = () => {
         },
     ]);
     const refTab = useRef();
-    CustomHook(refTab);
+    const refDivs = useRef([]);
+    CustomHook(refTab, refDivs);
 
     return (
         <section className="projects" ref={refTab}>
-            <div className="title">
+            <div className="title" ref={(el) => el && refDivs.current.push(el)}>
                 These are my projects till now...
             </div>
-            <div className="des">
+            <div className="des" ref={(el) => el && refDivs.current.push(el)}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quam voluptatem earum porro eligendi autem architecto amet ipsum, dolorem aut illum quasi maxime, quod hic itaque nobis sunt doloremque quae!
             </div>
             <div className='list'>
                 {
                     listProjects.map((value, key) => (
                         <div key={key} className='item'>
-                            <div className='images'>
+                            <div className='images' ref={(el) => el && refDivs.current.push(el)}>
                                 <img src={value.images} alt="" />
                             </div>
-                            <div className='content'>
+                            <div className='content' ref={(el) => el && refDivs.current.push(el)}>
                                 <h3>{value.name}</h3>
                                 <div className="des">{value.des}</div>
                                 <div className='mission'>

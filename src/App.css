@@ -126,6 +126,8 @@ section.home{
         flex-direction: column;
         width: min(100%, 400px);
         box-shadow: 0 150px 150px #e945e333;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
         transition: 0.5s;
         &:hover{
           box-shadow: 0 150px 150px #e945e355;
@@ -134,15 +136,15 @@ section.home{
           width: 100%;
           height: min(50vh, 700px);
           object-fit: cover;
-          object-position: top;
+          object-position: center;
           clip-path: polygon(
             81% 0, 100% 18%, 100% 100%, 0 100%, 0 0
           );
           border-top-left-radius: 30px;
         }
         & .info{
-          background-color: #eee;
-          color: #010824;
+          /* background-color: #eee; */
+          color: #ededed;
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           text-align: center;
@@ -150,6 +152,10 @@ section.home{
           padding: 20px;
           border-bottom-right-radius: 30px;
           border-bottom-left-radius: 30px;
+          backdrop-filter: blur(16px) saturate(200%);
+          background-color: rgba(255, 255, 255, 0.14) !important;
+          -webkit-backdrop-filter: blur(16px) saturate(200%);
+          border: 1px solid rgba(255, 255, 255, 0.125);
           font-size: 1.2em;
           & div:nth-child(1), div:nth-child(2), div:nth-child(3){
             font-weight: bold;
@@ -320,11 +326,11 @@ section.contacts{
   filter: blur(20px);
   opacity: 0;
   transition: 0.5s;
-  & .active{
-    transform: translateY(0);
-    filter: blur(0);
-    opacity: 1;
-  }
+}
+.animation.active{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
 }
 
 

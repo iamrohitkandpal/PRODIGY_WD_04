@@ -17,16 +17,16 @@ const Contacts = () => {
             value: 'https://www.linkedin.com/in/rohit-kandpal-'
         }
     ]);
-    const refTab = useRef();
     const divs = useRef([]);
-    CustomHook(refTab, divs);
+    const scrollTab = useRef();
+    CustomHook(scrollTab, divs);
 
     return (
-        <section className='contacts' ref={refTab}>
+        <section className='contacts' ref={scrollTab}>
             <div className='title' ref={(el) => el && divs.current.push(el)}>
                 These are options to connect with me
             </div>
-            <div className="des">
+            <div className="des" ref={(el) => el && divs.current.push(el)}>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores temporibus dolorum eligendi error, libero aperiam consequuntur itaque tenetur facilis fuga.
             </div>
             <div className="list" ref={(el) => el && divs.current.push(el)}>
