@@ -12,7 +12,7 @@ CustomHook(refTab);
                     MY NAME IS <span>ROHIT</span>
                 </div>
                 <div className="des">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem dicta culpa consequuntur earum recusandae accusamus? Nihil provident ut asperiores explicabo impedit laudantium veritatis, eius magni corporis ea sed ipsum sunt!
+                On my journey to becoming a skilled web developer, I consider myself a learner. I'm passionate about creating functional projects with the MERN stack, and I'm currently learning ReactJS and Node.js.
                 </div>
                 <a href="/Resume - Rohit Kandpal.pdf" target='_blank' rel='noopener no referrer'>Download My CV</a>
             </div>
@@ -23,7 +23,7 @@ CustomHook(refTab);
                         <div>Developer</div>
                         <div>Indian</div>
                         <div>01/03</div>
-                        <div>male</div>
+                        <div>Male</div>
                     </div>
                 </div>
             </div>

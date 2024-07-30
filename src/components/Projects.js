@@ -7,32 +7,36 @@ import { faPersonCircleQuestion, faEarthAmericas } from '@fortawesome/free-solid
 const Projects = () => {
     const [listProjects] = useState([
         {
-            name: 'Project Real-tine chating in website',
-            des: 'Sunt consequat ad laboris do non ipsum proident labore ipsun anin sit. Sit tempor laborum voluptate ut mollit. Proident ea non aliquip ad duis velit ullamco. Nulla velit exercitation nisi.',
-            mission: "Back-end Developer, systen analysis and design",
-            language: 'HTMLS, CSS3, React Js, Socketio,....',
+            name: 'Scatch - All Bag Luxury E-Commerce App',
+            link: '',
+            des: 'An e-commerce app for luxury bags featuring a sleek design, secure payment integration, and efficient backend development for managing product listings and transactions. Under Development',
+            mission: "Backend Development, Database Management, Payment",
+            language: 'EJS, JavaScript, NodeJS, MongoDB,....',
+            images: '/Project-1.png'
+        },
+        {
+            name: 'Aakash Vaani - Voice Controlled GIS App',
+            link: 'https://github.com/iamrohitkandpal/Geo-Voice-Navigator.git',
+            des: 'A GIS application controlled by voice commands, integrating machine learning for accurate voice recognition and backend management to handle geospatial data.',
+            mission: "Voice Control, Backend Development, Machine Learning",
+            language: 'EJS, Leaflet, ExpressJS, NodeJS, Tensorflow,....',
             images: '/Project-2.png'
         },
         {
-            name: 'Project Real-tine chating in website',
-            des: 'Sunt consequat ad laboris do non ipsum proident labore ipsun anin sit. Sit tempor laborum voluptate ut mollit. Proident ea non aliquip ad duis velit ullamco. Nulla velit exercitation nisi.',
+            name: 'Obyss Agency Full Page UI Clone',
+            link: 'https://github.com/iamrohitkandpal/Obys-Agency-UI-Project.git',
+            des: 'A full-page UI clone of Obyss Agency, focusing on advanced frontend development, animations, and smooth design to replicate the originals aesthetic and functionality.',
             mission: "Back-end Developer, systen analysis and design",
-            language: 'HTMLS, CSS3, React Js, Socketio,....',
-            images: '/Project-2.png'
+            language: 'HTMLS, CSS3, GSAP, SheryJS, LocomotiveJS,....',
+            images: '/Project-3.png'
         },
         {
-            name: 'Project Real-tine chating in website',
-            des: 'Sunt consequat ad laboris do non ipsum proident labore ipsun anin sit. Sit tempor laborum voluptate ut mollit. Proident ea non aliquip ad duis velit ullamco. Nulla velit exercitation nisi.',
-            mission: "Back-end Developer, systen analysis and design",
-            language: 'HTMLS, CSS3, React Js, Socketio,....',
-            images: '/Project-2.png'
-        },
-        {
-            name: 'Project Real-tine chating in website',
-            des: 'Sunt consequat ad laboris do non ipsum proident labore ipsun anin sit. Sit tempor laborum voluptate ut mollit. Proident ea non aliquip ad duis velit ullamco. Nulla velit exercitation nisi.',
-            mission: "Back-end Developer, systen analysis and design",
-            language: 'HTMLS, CSS3, React Js, Socketio,....',
-            images: '/Project-3.jpg'
+            name: 'College Lost and Found Section Full Page',
+            link: '',
+            des: 'A college project featuring a “Lost and Found” section with a clean, user-friendly interface, focusing on frontend development and design to manage lost items effectively.',
+            mission: "Frontend Development, College Project, Design",
+            language: 'HTMLS, CSS3, Other Libraries,....',
+            images: '/Project-4.png'
         },
     ]);
     const refTab = useRef();
@@ -42,20 +46,22 @@ const Projects = () => {
     return (
         <section className="projects" ref={refTab}>
             <div className="title" ref={(el) => el && refDivs.current.push(el)}>
-                These are my projects till now...
+                These are some of my projects...
             </div>
             <div className="des" ref={(el) => el && refDivs.current.push(el)}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quam voluptatem earum porro eligendi autem architecto amet ipsum, dolorem aut illum quasi maxime, quod hic itaque nobis sunt doloremque quae!
+            These are a few projects I’ve worked on, showcasing my learning and growth. Each project reflects my effort to apply different technologies and improve my skills in real-world scenarios.
             </div>
             <div className='list'>
                 {
                     listProjects.map((value, key) => (
                         <div key={key} className='item'>
-                            <div className='images' ref={(el) => el && refDivs.current.push(el)}>
-                                <img src={value.images} alt="" />
-                            </div>
+                            
+                                <div className='images' ref={(el) => el && refDivs.current.push(el)}>
+                                    <img src={value.images} alt="" />
+                                </div>
+                            
                             <div className='content' ref={(el) => el && refDivs.current.push(el)}>
-                                <h3>{value.name}</h3>
+                                <a href={value.link} alt=""><h3>{value.name}</h3></a>
                                 <div className="des">{value.des}</div>
                                 <div className='mission'>
                                     <div><FontAwesomeIcon icon={faPersonCircleQuestion} /></div>
