@@ -55,7 +55,7 @@ header{
     z-index: 100;
     backdrop-filter: blur(10px);
     & img{
-        width: 50px;
+        width: 75px;
     }
     & .logo, nav{
         display: flex;
